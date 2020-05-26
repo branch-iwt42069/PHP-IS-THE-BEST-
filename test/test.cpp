@@ -15,7 +15,7 @@ TEST(CheckAnswer, Answer1){
     short questionNumbers[20];
     
     *questionNumbers = massive();
-    EXPECT_EQ(checkAnswer(1, 1), true)
+    EXPECT_EQ(checkAnswer(1, 1), true);
 }
 /*TEST(CheckAnswer,Answer2){
 short questionNumbers[20];
