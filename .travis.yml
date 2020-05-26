@@ -15,8 +15,8 @@
   - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   - cd ..
   - cd ..
-   - make test && make runtest
-   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+  - make test && make runtest
+  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
    
    
 language:
