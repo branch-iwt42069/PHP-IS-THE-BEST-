@@ -6,7 +6,7 @@ GOOGLE_TEST_INCLUDE = /usr/local/include
 
 CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
 
-CFLAGS=-lstdc++ -lncursesw -g -Wall
+CFLAGS=-lstdc++ -lncursesw -g -Wall -Werror -Wextra
 
 all: executable
 	cd ./bin;./main.exe

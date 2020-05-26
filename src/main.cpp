@@ -17,7 +17,6 @@ int main() {
 	while (true) {
 		intro();
 		mainMenu();
-		
 		srand(time(NULL));
        *questionNumbers = massive();
 		short resultCounter = 0;
