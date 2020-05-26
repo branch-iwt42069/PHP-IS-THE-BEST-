@@ -1,19 +1,10 @@
 #include <gtest/gtest.h>
-#include <string>
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <ncurses.h>
-#include <ctime>
-#include <cstdlib>
-#include "../headers/functions.h"
 #include "../headers/design.h"
 
 using namespace std;
   
 TEST(CheckAnswer, Answer1){
     short questionNumbers[20];
-    
     *questionNumbers = massive();
     EXPECT_EQ(checkAnswer(1, 1), true);
 }

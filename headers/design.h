@@ -2,7 +2,7 @@
 #define DESIGN_H
 
 #include "../headers/functions.h"
-#include <string>
+#include <cstring>
 #include <iostream>
 #include <fstream>
 #include <vector>

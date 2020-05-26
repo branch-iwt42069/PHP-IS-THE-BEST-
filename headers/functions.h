@@ -1,7 +1,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#include <string>
+#include <cstring>
 #include <vector>
 
 using namespace std;
