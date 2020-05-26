@@ -1,0 +1,21 @@
+ 
+ dist: bionic
+ 
+ script: 
+   - make test && make runtest
+   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+   
+   
+language:
+   cpp
+
+compiler: 
+   g++
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
