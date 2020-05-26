@@ -4,9 +4,11 @@
 using namespace std;
   
 TEST(CheckAnswer, Answer1){
-    EXPECT_EQ(1, 1);
+	short questionNumbers[20];
+	*questionNumbers=massive();
+    EXPECT_EQ(checkAnswer(1, 1), 1);
 }
-/*TEST(CheckAnswer,Answer2){
+TEST(CheckAnswer,Answer2){
 short questionNumbers[20];
     
     *questionNumbers = massive();
@@ -33,4 +35,4 @@ short questionNumbers[20];
     *questionNumbers = massive();
 EXPECT_EQ(checkAnswer( 5, 3), true );
 
-}*/
+}
