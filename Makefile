@@ -27,7 +27,7 @@ clean:
 	rm -rf obj/*.o
 	rm -rf bin/main
 
-test: executable
+test: design functions
 	g++ $(CPPTEST_FLAGS) test/main.cpp -o test/main.o
 	g++ $(CPPTEST_FLAGS) test/test.cpp -o test/test.o
 	g++ test/main.o test/test.o obj/functions.o obj/design.o $(TEST_FLAG) bin/test.exe
