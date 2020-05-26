@@ -71,11 +71,11 @@ int readKey() {
 	return -1;
 }
 
-bool checkAnswer(int questionNumber, int choose) {
+int checkAnswer(int questionNumber, int choose) {
 	if (dataBase[questionNumber].right_ans == choose)
-		return true;
+		return 1;
 	else
-		return false;
+		return 0;
 }
 
 void endProgramm() {

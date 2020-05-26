@@ -21,7 +21,7 @@ extern vector< baseStruct > dataBase;
 short massive();
 int readBase();
 int readKey();
-bool checkAnswer(int questionNumber, int choose);
+int checkAnswer(int questionNumber, int choose);
 void endProgramm();
 
 #endif
