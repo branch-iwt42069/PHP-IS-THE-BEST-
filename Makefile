@@ -4,7 +4,7 @@ GOOGLE_TEST_LIB = gtest
 
 GOOGLE_TEST_INCLUDE = /usr/local/include
 
-CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
+CPPTEST_FLAGS = -Wall -Werror -Wextra -I $(GOOGLE_TEST_INCLUDE)
 
 CFLAGS=-lstdc++ -lncursesw -g -Wall -Werror -Wextra
 
@@ -25,7 +25,6 @@ functions: src/functions.cpp
 
 clean:
 	rm -rf obj/*.o
-	rm -rf bin/main
 
 test: design functions
 	g++ $(CPPTEST_FLAGS) test/main.cpp -o test/main.o
