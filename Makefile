@@ -4,7 +4,7 @@ GOOGLE_TEST_LIB = gtest
 
 GOOGLE_TEST_INCLUDE = /usr/local/include
 
-CPPTEST_FLAGS = -Wall -I $(GOOGLE_TEST_INCLUDE)
+CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
 
 CFLAGS=-lstdc++ -lncursesw -g -Wall -Werror -Wextra
 
