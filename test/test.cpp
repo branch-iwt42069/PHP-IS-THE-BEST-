@@ -7,7 +7,7 @@ TEST(CheckAnswer, Answer1){
 	readBase();
 	short questionNumbers[20];
 	*questionNumbers=massive();
-    EXPECT_EQ(checkAnswer(1, 1), 1);
+    EXPECT_EQ(checkAnswer(0, 1), 1);
 }
 /* TEST(CheckAnswer,Answer2){
 short questionNumbers1[20];
