@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <ncursesw/ncurses.h>
+#include <ncurses.h>
 #include <locale.h>
 
 void init() {
