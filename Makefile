@@ -9,6 +9,8 @@ CPPTEST_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
 CFLAGS=-lstdc++ -lncurses -g -Wall -Werror -Wextra
 
 all: executable
+
+run:
 	cd ./bin;./main.exe
 
 executable: design functions main
