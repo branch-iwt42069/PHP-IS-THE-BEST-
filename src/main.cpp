@@ -22,9 +22,9 @@ int main()
         *questionNumbers = massive();
         short resultCounter = 0;
         for (int i = 0; i < 20; ++i)
-            questionNumbers[i] = 0;
+            questionNumbers[i] = i;
         for (int i = 0; i < 20; ++i) {
-            questionNumbers[i] = rand() % dataBase.size();
+            questionNumbers[i] = i % dataBase.size();
             for (int j = i - 1; j >= 0; --j) {
                 if (questionNumbers[i] == questionNumbers[j]) {
                     --i;
