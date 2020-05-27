@@ -38,7 +38,6 @@ int main()
                     if (checkAnswer(i, choose))
                         resultCounter++;
                 }
-                showResult(resultCounter);
             }
             showResult(resultCounter);
         }
