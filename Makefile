@@ -28,9 +28,15 @@ functions: src/functions.cpp
 clean:
 	rm -rf obj/*.o
 
-test: design functions
+test: maint testcpp design functions build clean
+
+maint:
 	g++ $(CPPTEST_FLAGS) test/main.cpp -o test/main.o
+
+testcpp:
 	g++ $(CPPTEST_FLAGS) test/test.cpp -o test/test.o
+
+build:
 	g++ test/main.o test/test.o obj/functions.o obj/design.o $(TEST_FLAG) bin/test.exe
 	
 runtest: 
