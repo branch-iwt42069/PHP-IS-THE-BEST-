@@ -1,3 +1,4 @@
+
 #include "../headers/design.h"
 #include "../headers/functions.h"
 #include <string>
@@ -8,7 +9,7 @@
 #include <locale.h>
 
 void init() {
-	//setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "");
 	initscr();
 	noecho();
 	curs_set(0);
@@ -43,15 +44,15 @@ void intro() {
 	addstr("|/       |/   \\__/(_______)(_______)  (____\\/_)(_______)\\_______/(_______/");
 	attron(COLOR_PAIR(2));
 	move(11, 20);
-	addstr("Авторы:");
+	addstr("Autors:");
 	move(13, 20);
-	addstr("Макогон Данил");
+	addstr("Stepanchenko Egor Andreyevich");
 	move(14, 20);
-	addstr("Певнев Александр");
+	addstr("Noskov Sergey");
 	move(15, 20);
-	addstr("Федосов Кирилл");
+	addstr("Matashev Vladimir");
 	move(18, 20 );
-	addstr("Для продолжения нажми любую клавишу");
+	addstr("Press button to begin");
 	refresh();
 	getch();
 }
@@ -59,7 +60,7 @@ void intro() {
 void mainMenu() {
 	clear();
 	attron(COLOR_PAIR(2));
-	border(0, 0, 0, 0, 0, 0, 0, 0);
+	
 	attron(COLOR_PAIR(1));
 	move(1, 3);
 	addstr(" _______  _______  _______  _______    _______          _________ _______ ");
@@ -79,21 +80,21 @@ void mainMenu() {
 	addstr("|/       |/   \\__/(_______)(_______)  (____\\/_)(_______)\\_______/(_______/");
 	attron(COLOR_PAIR(2));
 	move(11, 10);
-	addstr("Правила:");
+	addstr("Rules:");
 	move(13, 10);
-	addstr("Вам предложено пройти тест на знание программирования.");
+	addstr("You are going to be testetd in you anime knowlege.");
 	move(14, 10);
-	addstr("В конца теста на экране высветится ваш уровень навыков");
+	addstr("At the end of the test you will see your powerlevel");
 	move(15, 10);
-	addstr("программирования, составленный на основе ваших ответов.");
+	addstr("We won't be rude with you unless you are a total dumb dumb.");
 	move(17, 10);
-	addstr("Управление:");
+	addstr("Controls:");
 	move(19, 10);
-	addstr("Нажимай '1', '2', '3', '4' или 'A', 'B', 'C', 'D'");
+	addstr("Press '1', '2', '3', '4' or 'A', 'B', 'C', 'D'");
 	move(20, 10);
-	addstr("для выбора варианта ответа");
+	addstr("to choose your variants");
 	move(21, 10);
-	addstr("Нажми ESCAPE в любой момент для выхода.");
+	addstr("Press ESCAPE if you are loser and need to quit.");
 	refresh();
 	getch();
 }
@@ -176,13 +177,13 @@ void showResult(short result) {
 		addstr("|_______| |_______| |_|  |__| |___|  |_______| |___|  |_|");
 		attron(COLOR_PAIR(2));
 		move(11, 29);
-		printw("Твой результат - %d", result);
+		printw("Your pathetic result - %d", result);
 		move(14, 16);
-		addstr("Ты очень хочешь программировать, но для этого");
+		addstr("Dude I bet you whatced 1st season of SAO and ");
 		move(15, 16);
-		addstr("нужно очень сильно стараться и много работать.");
+		addstr("thinking that you are an anime pro.");
 		move(18, 16);
-		addstr("Попрактикуйся ещё и попробуй снова!");
+		addstr("Get out of my sight!");
 		border(0, 0, 0, 0, 0, 0, 0, 0);                                           
 	} else
 	if (result <= 14) {
@@ -203,13 +204,13 @@ void showResult(short result) {
 		addstr("|_|   |_| |___|  |______|  |______|  |_______| |_______|");
 		attron(COLOR_PAIR(2));
 		move(11, 29);
-		printw("Твой результат - %d", result);
+		printw("Your result - %d", result);
 		move(14, 16);
-		addstr("У тебя хорошо получается, но это ли");
+		addstr("Well it looks like you know enough titles");
 		move(15, 16);
-		addstr("предел твоих возможностей?.");
+		addstr("but is it your limit?.");
 		move(18, 16);
-		addstr("Попрактикуйся ещё и попробуй снова!");
+		addstr("Go whatch some anime!");
 		border(0, 0, 0, 0, 0, 0, 0, 0);       
 	} else
 	if (result <= 18) {
@@ -230,16 +231,16 @@ void showResult(short result) {
 		addstr("|_______| |_______| |_|  |__| |___|  |_______| |___|  |_|");
 		attron(COLOR_PAIR(2));
 		move(11, 29);
-		printw("Твой результат - %d", result);
+		printw("Your result - %d", result);
 		move(14, 16);
-		addstr("Ты уже многое умеешь, но в данной области");
+		addstr("Wow you are good bro");
 		move(15, 16);
-		addstr("необходимо постоянно развиваться. Ты можешь лучше!");
+		addstr("But you still is not as powerful as me!");
 		move(18, 16);
-		addstr("Попрактикуйся ещё и попробуй снова!");
+		addstr("Go and whatch anime instead!");
 		border(0, 0, 0, 0, 0, 0, 0, 0);       
 	} else
-	if (result <= 20) {
+	if (result <= 21) {
 		attron(COLOR_PAIR(1));
 		move(1, 3);
 		addstr("_________ _______  _______  _______    _        _______  _______  ______  ");
@@ -259,13 +260,13 @@ void showResult(short result) {
 		addstr("   )_(   (_______/|/     \\||/     \\|  (_______/(_______/|/     \\|(______/ ");		
 		attron(COLOR_PAIR(2));
 		move(11, 29);
-		printw("Твой результат - %d", result);
+		printw("Your result - %d", result);
 		move(14, 16);
-		addstr("Вау! Неужели программисты с такими навыками");
+		addstr("IMPOSSIBLE! How does so powerful anime-whatcher");
 		move(15, 16);
-		addstr("тратят своё свободное время на разные тесты?.");
+		addstr("spend his time on this test?.");
 		move(18, 16);
-		addstr("В любом случае, вы - молодец!");
+		addstr("Anyway you can call yourself megamind!");
 		border(0, 0, 0, 0, 0, 0, 0, 0);      
 	}
 	getch();
